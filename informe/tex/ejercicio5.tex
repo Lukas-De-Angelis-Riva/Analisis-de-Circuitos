@@ -1,0 +1,30 @@
+Veamos cómo se comportaron los parámetros de circuito.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Parámetro} & \textbf{Filtro ideal} & \textbf{Filtro implementado} & \textbf{Error \%} \\ \hline
+K                  & 0.8911                & 0.8913                       & 0.02                       \\ \hline
+$\omega_{o,1}$     & 1783.14               & 1783.85                      & 0.04                       \\ \hline
+$Q_{1}$            & 0.7847                & 0.7852                       & 0.06                       \\ \hline
+$\omega_{o,2}$     & 948.91                & 948.51                       & 0.04                       \\ \hline
+$Q_{2}$            & 3.5583                & 3.5627                       & 0.12                        \\ \hline
+\end{tabular}
+\end{table}
+
+Vemos que el circuito propuesto tiene un error prácticamente despreciable en todos los parámetros (menor a $1\%$), por lo que considero que resulta de una buena estimacíon.
+
+Veamos cómo resultaron afectados los polos de la transferencia.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\cline{1-3} \cline{5-7}
+\textbf{$\Re$(Polo ideal)} & \textbf{$\Re$(Polo aprx)} & \textbf{Error\%} &  & \textbf{$\Im$(Polo ideal)} & \textbf{$\Im$(Polo aprx)} & \textbf{Error\%} \\ \cline{1-3} \cline{5-7} 
+-1136.16                   & -1135.9                   & 0.02             &  & 1374.31                    & 1374.6                    & 0.02             \\ \cline{1-3} \cline{5-7} 
+-133.34                    & -133.11                   & 0.17             &  & 939.50                     & 939.13                    & 0.04             \\ \cline{1-3} \cline{5-7} 
+\end{tabular}
+\end{table}
+
+Vemos nuevamente que el error relativo, tanto la parte real como la parte imaginaria, de los polos mantiene un error relativo menor que un $1 \%$ por lo que puede ser considerado como una buena estimación.

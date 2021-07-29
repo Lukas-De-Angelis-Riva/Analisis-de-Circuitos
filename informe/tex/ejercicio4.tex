@@ -1,0 +1,25 @@
+Dada entonces la configuración seleccionada en la sección anterior y la transferencia del enunciado se tratará de realizar una búsqueda para los valores de los componentes que mejor se adecúen a los valores teóricos. Para ello se realizó el siguiente script en Python (cuyo objetivo es encontrar primero las posibles combinaciones de capacitores para satisfacer la ganancia y luego con ellas buscar la primera combinación de las demás resistencias y capacitores que obtengan un error relativo para los coeficientes de los denominadores menor al $5\%$) 
+\lstinputlisting[language=Python]{BusquedaDeComponentes.py}
+
+Del que se obtuvieron los siguientes valores
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{$H_{1}$} & \multicolumn{2}{c|}{$H_{2}$} \\ \hline
+Componente       & Valor      & Componente      & Valor      \\ \hline
+$C_{1,1}$        & 1.00n       & $C_{1,2}$       & 10n       \\ \hline
+$C_{2,1}$        & 130n       & $C_{2,2}$       & 160n       \\ \hline
+$C_{3,1}$        & 2.20n       & $C_{3,2}$       & 5.1n       \\ \hline
+$R_{1,1}$        & 5.36k       & $R_{1,2}$       & 1.69k       \\ \hline
+$R_{2,1}$        & 205k         & $R_{2,2}$       & 806k         \\ \hline
+\end{tabular}
+\end{table}
+
+Con dichos valores se obtiene la siguiente transferencia:
+$$
+    H^{*}(s) = \frac{-0.4545s^2}{s^2 + 2271.87s + 3.18 \cdot 10^{6}} \cdot \frac{-1.9608s^2}{s^2 + 266.23s + 899680}
+$$
+
+Ya desde esta expresión podemos ver que los coeficientes de la transferencia obtenida son comparables a los coeficientes de la transferencia ideal.

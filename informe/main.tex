@@ -1,0 +1,101 @@
+\documentclass{estilo}
+
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}        % para los vectores columnas
+\usepackage{amsmath}
+
+
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+
+\begin{document}
+
+\maketitle
+
+\section*{Enunciado}
+Dada la transferencia
+$$
+H(s) = \frac{0.8911 s^4}{s^4 + 2539 s^3 + 4.686 \cdot 10^6 s^2 + 2.894 \cdot 10^9 s + 2.863 \cdot 10^{12}}
+$$
+
+\begin{enumerate}
+    \item[\hyperlink{ej1}{1.}] Definir el tipo de filtro y calcular los polos y los ceros de $H(s)$. En el caso que corresponda calcule los parámetros $\omega_0$, $Q$ y la ganancia de la misma.
+    \item[\hyperlink{ej2}{2.}] Realizar el cálculo analítico de las respuestas al impulso, al escalón y al seno (en 1 frecuencia) y graficar.
+    \item[\hyperlink{ej3}{3.}] Elegir un circuito con amplificadores operacionales que cumpla con la transferencia propuesta. Justificar la elección del mismo.
+    \item[\hyperlink{ej4}{4.}] Definir los valores de los componentes, normalizando según se indica. Recalcular la transferencia con los valores normalizados.
+        \begin{itemize}
+            \item Capacitores: utilizar la serie del 10\% (E24) y valores entre $1 n F$ y $1 \mu F$
+            \item Resistores: utilizar la serie del 1\% (E96) o 5\% (E48) y valores entre $1k\Omega$ y $1M\Omega$
+        \end{itemize}
+    \item[\hyperlink{ej5}{5.}] Calcular el error porcentual de los parámetros $\omega_0$, $Q$, la ganancia y las singularidades del sistema respecto a la transferencia original.
+    \item[\hyperlink{ej6}{6.}] Realizar las simulaciones \textit{a}, \textit{b}, \textit{c}, \textit{d} y \textit{e}. Tanto para la transferencia original como para la transferencia con los valores normalizados.
+    \item[\hyperlink{ej7}{7.}] Realizar las simulaciones \textit{a}, \textit{b}, \textit{d} y \textit{e} para el filtro con Spice.
+\end{enumerate}
+Simulaciones:
+    \begin{enumerate}[label=\alph*)]
+        \item Diagramas de Bode de módulo y fase
+        \item Respuesta al escalón
+        \item Respuesta al impulso
+        \item Respuesta a señal senoidal (3 frecuencias características)
+        \item Respuesta a señal cuadrada de frecuencias: $f_o/10$,  $f_o$ y $10\cdot f_o$
+    \end{enumerate}
+
+\newpage
+
+\tableofcontents
+
+\newpage 
+
+\input{tex/aclaraciones}
+
+\newpage 
+
+\hypertarget{ej1}{\section{Tipo de filtro}}
+\input{tex/ejercicio1}
+
+\hypertarget{ej2}{\section{Cálculo analítico de las respuestas}}
+\input{tex/ejercicio2}
+
+\hypertarget{ej3}{\section{Elección del circuito}}
+\input{tex/ejercicio3}
+
+\hypertarget{ej4}{\section{Elección de componentes}}
+\input{tex/ejercicio4}
+
+\hypertarget{ej5}{\section{Cálculo del error}}
+\input{tex/ejercicio5}
+
+\hypertarget{ej6}{\section{Simulaciones de la transferencia}}
+\input{tex/ejercicio6}
+
+\hypertarget{ej7}{\section{Simulaciones del filtro}}
+\input{tex/ejercicio7}
+\end{document}

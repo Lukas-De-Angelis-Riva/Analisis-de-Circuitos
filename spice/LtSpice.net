@@ -1,0 +1,23 @@
+* C:\Users\Lukas\Desktop\Nueva carpeta\LtSpice.asc
+V1 Vin 0 SINE(0 1 142.4 1u 1u 0s 1m) AC 1 0
+V2 V+ 0 15
+V3 0 V- 15
+XU1 0 N004 V+ V- N002 TL081
+XU2 0 N005 V+ V- H TL081
+C11 N001 NC_01 1n
+R11 N001 0 5.36k
+C21 N004 N001 130n
+C31 N002 N001 2.2n
+R21 N002 N004 205k
+C32 H N003 5.1n
+R22 H N005 806k
+C22 N005 N003 160n
+R12 N003 0 1.69k
+C12 N003 N002 10n
+;ac dec 301 1 1e9
+.tran 0 5 0 0.1
+.include TL081.txt
+;ac oct 301 1 1e9
+.lib opamp.sub
+.backanno
+.end
